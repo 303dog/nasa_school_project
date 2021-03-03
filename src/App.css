@@ -1,38 +1,41 @@
-.App {
+
+.date {
+  font-size: 28px;
+}
+
+.explain {
+  font-size: 18px;
+  display: inline-block;
+}
+
+
+
+.photo {
+  color: pink;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nasaphoto {
+  border: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  color: blue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.home-link {
+  font-size: 25px;
+  background: #7d7594;
+  
+  padding: 40px 80px;
   color: white;
+  border-radius: 50%;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-link:hover {
+  border-radius: 5px;
+  background: #6ea093;
+  text-align: center;
+  
 }

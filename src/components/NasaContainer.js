@@ -1,9 +1,11 @@
 import React from "react";
 import {useState, useEffect} from "react";
+import NavBar from "./NavBar";
+import Dates from "./DateRange";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
-export default function NasaPhoto() {
+export default function NasaContainer() {
 
         const [photoData, setPhotoData] = useState(null);
 
@@ -23,9 +25,11 @@ export default function NasaPhoto() {
         if (!photoData) return <div />;
         
         return (
-            <div>
+            <>
+            <NavBar />
+            <div className="nasaphoto">
                 {photoData.media_type === "image" ? (
-                <img src={photoData.url} alt={photoData.title} />
+                <img src={photoData.url} alt={photoData.title} className="photo" />
                 ) : (
                     <iframe 
                     title="space-video"
@@ -39,10 +43,10 @@ export default function NasaPhoto() {
                 )}
                 <div>
                     <h1>{photoData.title}</h1>
-                    <p>{photoData.date}</p>
-                    <p>{photoData.explanation}</p>
+                    <p className="date">{photoData.date}</p>
+                    <p className="explain">{photoData.explanation}</p>
                 </div>
             </div>
-
+        </>
     );
 }
